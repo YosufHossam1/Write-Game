@@ -1,0 +1,340 @@
+:root {
+    --main-color: #03a9f4;
+    --secondary-color: #ffc107;
+    --third-color: #cecccc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html {}
+
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid var(--main-color);
+    gap: 10px;
+}
+
+.logo {
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+}
+
+.theam {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.dark {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    color: white;
+}
+
+.darkFont {
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    color: white !important;
+}
+
+.game>.custom::placeholder {
+    color: white;
+}
+
+
+.switch {
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--secondary-color);
+    border: 3px solid var(--main-color);
+    position: relative;
+    cursor: pointer;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch input:checked+.slider {
+    left: calc(100% - 22px);
+}
+
+.slider {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.reset {
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reset:hover {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
+
+.continer {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.result {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: var(--third-color);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    min-height: 200px;
+    flex-basis: 1;
+
+    &.t {
+        background-color: #3f51b5;
+    }
+
+    &.s {
+        background-color: #f44336d9;
+    }
+
+    &.w {
+        background-color: #4caf50;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-size: 50px;
+        margin: 15px;
+    }
+}
+
+
+
+
+.card img {
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+}
+
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 70%;
+}
+
+.word {
+    border: 3px solid var(--main-color);
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 80px;
+    font-weight: bold;
+    color: var(--main-color);
+    width: fit-content;
+    text-align: center;
+    user-select: none;
+    letter-spacing: 10px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game>input {
+    width: 600px;
+    outline: none;
+    height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--main-color);
+    border: 3px solid var(--main-color);
+    border-radius: 15px;
+    text-align: center;
+    caret-color: var(--main-color);
+}
+
+.game>input::placeholder {
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.game>button {
+    width: 400px;
+    height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--main-color);
+    border: 3px solid var(--main-color);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: var(--secondary-color);
+}
+
+.game>button:hover {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
+
+.dash {
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+.dash .leaderBoard {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border: 3px solid var(--main-color);
+    align-items: center;
+    height: 60px;
+}
+
+.dash .leaderBoard .slice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    flex-basis: 25%;
+    height: 100%;
+    padding: 10px;
+}
+
+.dash .leaderBoard .slice:not(:last-child) {
+    border-right: 3px solid var(--main-color);
+}
+
+@media (max-width: 850px) {
+    .word {
+        width: 120%;
+    }
+
+    .dash {
+        width: 80%;
+    }
+}
+
+@media (max-width: 430px) {
+    .info h2 {
+        font-size: 20px;
+    }
+
+    .info span {
+        font-size: 15px;
+    }
+
+    .card {
+        width: 100px;
+        min-height: 150px;
+    }
+
+    header .theam {
+        gap: 5px;
+    }
+
+    .dash .leaderBoard .slice:last-child {
+        flex-basis: 40%;
+    }
+
+    .card img {
+        display: none;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .word {
+        font-size: 30px;
+        width: fit-content;
+        letter-spacing: 5px;
+    }
+
+    .game>input {
+        width: 100%;
+    }
+
+    .game>button {
+        width: 100%;
+    }
+
+    .dash {
+        width: 100%;
+    }
+
+    .dash .leaderBoard .slice {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 325px) {
+    header {
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .reset {
+        padding: 5px;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn JavaScript</title>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">TypeMaster</div>
+    <div class="theam">
+      <span>Dark/light mode</span>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+      <button class="reset" type="button">Reset The Game</button>
+    </div>
+  </header>
+
+  <div class="continer">
+    <div class="result">
+      <div class="card t">
+        <img src="/time-passing.png" alt="opsss">
+        <div class="info">
+          <span>Time Lift</span>
+          <h2 class="time">5</h2>
+          <span>Seconds</span>
+        </div>
+      </div>
+      <div class="card s">
+        <img src="credit-score.png" alt="opsss">
+        <div class="info">
+          <span>Score</span>
+          <h2 class="score">0</h2>
+        </div>
+      </div>
+      <div class="card w">
+        <img src="countdown.png" alt="opsss">
+        <div class="info">
+          <span>words</span>
+          <h2 class="wordsCount">0</h2>
+        </div>
+      </div>
+    </div>
+    <div class="game">
+      <div class="word">
+        <span class="letter">word will be here</span>
+      </div>
+      <input type="text" name="" id="input" placeholder="type here" disabled>
+      <button class="start" type="button">Start Game</button>
+    </div>
+    <div class="dash">
+    </div>
+  </div>
+
+
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
